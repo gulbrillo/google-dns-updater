@@ -84,10 +84,10 @@ def test_for_record_change(old_ip, new_ip):
   logging.info("Existing IP is {}".format(old_ip))
   logging.info("New IP is {}".format(new_ip))
   if (old_ip != new_ip):
-    logging.info("IP addresses match. No update required.")
+    logging.info("IP addresses do no match. Update required.")
     return True
   else:
-    logging.info("IP addresses do no match. Update required.")
+    logging.info("IP addresses match. No update required.")
     return False
 
 def create_record_set(host, record_type, ip):
